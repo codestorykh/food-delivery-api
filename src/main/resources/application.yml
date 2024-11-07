@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: todo-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/food_delivery
+    password: password
+    username: codestorykh
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        #PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        #Commit if you want to avoid unnecessary flushes,
+        #which can be useful in scenarios where multiple queries are executed without needing the changes to be immediately visible.
+        #default_flush_mode: COMMIT
+    show-sql: on
