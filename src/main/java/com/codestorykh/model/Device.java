@@ -27,6 +27,7 @@ public class Device extends BaseEntity {
     private boolean trustDevice;
     private String status;
 
+    @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 }

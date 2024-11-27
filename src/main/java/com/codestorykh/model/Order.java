@@ -19,6 +19,9 @@ public class Order extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "order_id")
+    private String orderId;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate = new Date();
 
@@ -27,12 +30,14 @@ public class Order extends BaseEntity{
     private double tax;
     private double restaurantRating;
     private double deliveryRating;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "order_status")
     private OrderStatus orderStatus;
+
     private Long userId;
     private Long restaurantId;
-    private Long deliveryId;
     private Long deliveryPartnerId;
     private Long paymentId;
-
 
 }

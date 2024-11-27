@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tbl_menu_item")
+@Table(name = "tbl_menu_item_photo")
 public class MenuItemPhoto extends BaseEntity{
 
     @Id

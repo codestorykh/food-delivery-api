@@ -9,7 +9,7 @@ spring:
     username: codestorykh
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         #PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
@@ -19,3 +19,5 @@ spring:
         #which can be useful in scenarios where multiple queries are executed without needing the changes to be immediately visible.
         #default_flush_mode: COMMIT
     show-sql: on
+
+

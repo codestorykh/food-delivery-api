@@ -25,11 +25,14 @@ public class DeliveryPartner extends BaseEntity{
     private String username;
     private String password;
     private String gender;
+    @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
     @Column(name = "phone_number", unique = true, nullable = false)
     private String phoneNumber;
     private String email;
     private String address;
+
+    @Enumerated(EnumType.STRING)
     private VehicleType vehicleType;
     private boolean available;
 

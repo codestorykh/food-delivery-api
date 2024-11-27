@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -25,11 +26,19 @@ public class User extends BaseEntity{
     private String lastName;
     @Column(name = "gender", length = 10)
     private String gender;
+    @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
     private String email;
+    @Column(name = "phone_number", length = 15, nullable = false)
     private String phoneNumber;
     private String address;
     @Column(name = "user_type")
+
+    @Enumerated(EnumType.STRING)
     private UserType userType;
     private String status;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Device> devices;
 }

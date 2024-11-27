@@ -20,15 +20,18 @@ public class Delivery {
     private Long id;
 
     @Temporal(TemporalType.TIME)
-    private Date pickupTime = new Date();
+    private Date pickupTime;
 
     @Temporal(TemporalType.TIME)
-    private Date deliveryTime = new Date();
+    private Date deliveryTime;
 
     private String pickupAddress;
     private String deliveryAddress;
     private double deliveryFee;
+
+    @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
+
     private Long deliveryPartnerId;
     private Long orderId;
 }

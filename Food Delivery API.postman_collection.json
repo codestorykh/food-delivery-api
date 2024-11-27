@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "bfa59b1b-2d6e-4dca-a9b7-19bdc5927f19",
+		"name": "Food Delivery API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24022677"
+	},
+	"item": [
+		{
+			"name": "User Fetch All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"codestorykh\",\r\n    \"first_name\": \"Code\",\r\n    \"last_name\": \"StoryKH\",\r\n    \"gender\": \"M\",\r\n    \"phone_number\": \"0892547**\",\r\n    \"dob\": \"1999-11-23\",\r\n    \"address\": \"st0090, pp, kk\",\r\n    \"user_type\": \"REGULAR\",\r\n    \"device_info\": {\r\n        \"device_id\": \"0933439234028340284902390482A\",\r\n        \"device_type\": \"Android\",\r\n        \"device_model\": \"Pixel 7\",\r\n        \"os_version\": \"14\",\r\n        \"app_version\": \"1.4.9\",\r\n        \"trust_device\": true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"codestorykh\",\r\n    \"first_name\": \"Code\",\r\n    \"last_name\": \"StoryKH\",\r\n    \"gender\": \"M\",\r\n    \"phone_number\": \"0892547**\",\r\n    \"dob\": \"2002-11-23\",\r\n    \"address\": \"phnom penh\",\r\n    \"user_type\": \"REGULAR\",\r\n    \"device_info\": {\r\n        \"device_id\": \"0933439234028340284902390482A\",\r\n        \"device_type\": \"Android\",\r\n        \"device_model\": \"Pixel 7\",\r\n        \"os_version\": \"14\",\r\n        \"app_version\": \"1.4.9\",\r\n        \"trust_device\": true\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"001\",\r\n    \"name\": \"Pizza 🍕 Dev\",\r\n    \"category\": \"Fast Food\",\r\n    \"description\": \"Best Food and Price\",\r\n    \"address\": \"pp\",\r\n    \"phone_number\": \"0129933**\",\r\n    \"logo_url\": \"/001_fast_food_abc\",\r\n    \"open_time\": \"09:00 AM\",\r\n    \"close_time\": \"08:30 PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/restaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delivery Partner New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"hihi009\",\n    \"password\": \"90822@123\",\n    \"first_name\": \"Hi\",\n    \"last_name\": \"Hi Hi\",\n    \"gender\": \"M\",\n    \"phone_number\": \"0892567**\",\n    \"dob\": \"2002-11-23\",\n    \"address\": \"st0090, pp, kk\",\n    \"vehicle\": \"MOTORCYCLE\",\n    \"available\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/delivery-partner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"delivery-partner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu Item Upload Photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/Users/theara/Downloads/Pizza3.jpg",
+								"/Users/theara/Downloads/Pizza2.jpg",
+								"/Users/theara/Downloads/Pizza1.jpg"
+							]
+						},
+						{
+							"key": "fileType",
+							"value": "PHOTO",
+							"type": "text"
+						},
+						{
+							"key": "uploadedBy",
+							"value": "System",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/v1/menu-item/photo/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"menu-item",
+						"photo",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu Item New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"2024\",\r\n    \"name\": \"Pizza Dev\",\r\n    \"description\": \"Pizza Dev everyday bug fix ....\",\r\n    \"price\": 5.8,\r\n    \"availability\": 500,\r\n    \"restaurant_id\": 1,\r\n    \"menu_item_photo\": [\r\n        {\r\n            \"id\": 1,\r\n            \"file_type\": \"PHOTO\",\r\n            \"file_format\": \"jpg\",\r\n            \"file_size\": 157762.0,\r\n            \"file_name\": \"Pizza3\",\r\n            \"small_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza3jpg\",\r\n            \"medium_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza3jpg\",\r\n            \"large_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza3jpg\",\r\n            \"uploaded_by\": \"System\",\r\n            \"status\": \"ACTIVE\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"file_type\": \"PHOTO\",\r\n            \"file_format\": \"jpg\",\r\n            \"file_size\": 202862.0,\r\n            \"file_name\": \"Pizza2\",\r\n            \"small_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza2jpg\",\r\n            \"medium_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza2jpg\",\r\n            \"large_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza2jpg\",\r\n            \"uploaded_by\": \"System\",\r\n            \"status\": \"ACTIVE\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"file_type\": \"PHOTO\",\r\n            \"file_format\": \"jpg\",\r\n            \"file_size\": 101393.0,\r\n            \"file_name\": \"Pizza1\",\r\n            \"small_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza1jpg\",\r\n            \"medium_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza1jpg\",\r\n            \"large_url\": \"/Users/theara/Desktop/food-delivery-api/upload//Pizza1jpg\",\r\n            \"uploaded_by\": \"System\",\r\n            \"status\": \"ACTIVE\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/menu-item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"menu-item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_amount\": 5.8,\n    \"tax\": 0.25,\n    \"delivery_fee\": 0.38,\n    \"user_id\": 1,\n    \"user_phone_number\": \"0892547**\",\n    \"restaurant_id\": \"1\",\n    \"order_items\": [\n        {\n            \"quantity\": 1,\n            \"price\": 5.8,\n            \"order_menu_item\": [\n                {\n                    \"code\": \"2024\",\n                    \"name\": \"Pizza Dev\",\n                    \"description\": \"Pizza Dev\",\n                    \"price\": 5.8\n                }\n            ]\n        }\n    ],\n    \"payment\": {\n        \"amount\": 6.88,\n        \"payment_method\": \"CASH\",\n        \"payment_description\": \"គិតជាលុយខ្មែរ\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oder Status Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"order_id\": \"0892547**67cb6408-4984-42c5-be0c-e67ed48c23e4\",\n    \"order_status\": \"OUT_FOR_DELIVERY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,5 @@
 package com.codestorykh.enumeration;
 
 public enum PaymentMethod {
-    CASH, CARD
+    CASH, BANK, CARD
 }

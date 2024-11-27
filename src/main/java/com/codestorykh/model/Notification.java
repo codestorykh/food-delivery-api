@@ -21,8 +21,13 @@ public class Notification extends BaseEntity{
 
     private String title;
     private String content;
+
+    @Enumerated(EnumType.STRING)
     private NotificationType notificationType;
+
+    @Enumerated(EnumType.STRING)
     private NotificationChannel notificationChannel;
+
     private boolean read;
     private Long userId;
     private Long deviceId;
